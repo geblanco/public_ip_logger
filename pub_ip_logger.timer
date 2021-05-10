@@ -1,0 +1,10 @@
+[Unit]
+Description=Publish public IP to a centralized server every hour
+
+[Timer]
+OnBootSec=5m
+OnUnitInactiveSec=120m
+
+[Install]
+WantedBy=basic.target
+

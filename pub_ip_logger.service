@@ -1,0 +1,13 @@
+[Unit]
+Description=Public IP logger service
+After=ssh-agent.service
+
+[Service]
+Type=oneshot
+StandardOutput=null
+RemainAfterExit=yes
+Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
+ExecStart=/usr/bin/pub_ip_logger %h
+
+[Install]
+WantedBy=default.target
