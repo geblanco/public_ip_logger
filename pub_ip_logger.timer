@@ -6,5 +6,4 @@ OnBootSec=5m
 OnUnitInactiveSec=120m
 
 [Install]
-WantedBy=basic.target
-
+WantedBy=default.target
